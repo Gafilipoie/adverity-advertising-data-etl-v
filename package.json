@@ -1,21 +1,40 @@
 {
-  "name": "my-app",
+  "name": "adverity",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start:components": "cd packages/components && yarn start",
+    "start:utils": "cd packages/utils && yarn start",
+    "start:web": "cd packages/web && yarn start",
+    "build": "cd packages/web && yarn build",
+    "test:web": "cd packages/web && yarn test",
+    "test:components": "cd packages/components && yarn test",
+    "test:utils": "cd packages/utils && yarn test",
+    "watch": "concurrently \"yarn start:utils --watch\" \"yarn start:components --watch\" \"yarn start:web\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "concurrently": "^6.2.0",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.27.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-function-bind": "^7.12.13",
+    "@babel/preset-react": "^7.13.13",
+    "babel-plugin-styled-components": "^1.12.0"
   },
   "eslintConfig": {
     "extends": [

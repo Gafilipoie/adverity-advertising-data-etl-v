@@ -1,0 +1,37 @@
+{
+  "name": "@adverity/components",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "private": true,
+  "scripts": {
+    "start": "babel --root-mode upward src -d lib",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    "@adverity/utils": "^0.1.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.1",
+    "ramda": "^0.25.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "styled-components": "^4.1.3"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

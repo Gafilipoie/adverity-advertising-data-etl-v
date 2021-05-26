@@ -1,0 +1,29 @@
+{
+  "name": "@adverity/utils",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "private": true,
+  "scripts": {
+    "start": "babel --root-mode upward src -d lib",
+    "test": "react-scripts test"
+  },
+  "peerDependencies": {
+    "ramda": "^0.25.0"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
