@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import APP_CONFIG from '@adverity/config';
+import { createGlobalStyle } from "styled-components";
+import APP_CONFIG from "@adverity/config";
 
 const theme = APP_CONFIG.theme.base;
 
@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     height: 100%;
     padding: ${theme.spacing.small};
+  }
+
+  .content {
+    flex: 1 0 auto;
   }
 `;
 

@@ -1,7 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 const StyleDashboard = styled.div`
-  ${() => {
+  ${({ theme }) => {
+    const { spacing } = theme;
+
     return css`
       display: flex;
 
@@ -9,7 +11,7 @@ const StyleDashboard = styled.div`
         display: flex;
         justify-content: flex-start;
         flex: 1;
-        margin-right: 8px;
+        margin-right: ${spacing.tiny};
         background-color: red;
       }
 
@@ -23,5 +25,5 @@ const StyleDashboard = styled.div`
   }}
 `;
 
-StyleDashboard.displayName = 'StyleDashboard';
+StyleDashboard.displayName = "StyleDashboard";
 export default StyleDashboard;

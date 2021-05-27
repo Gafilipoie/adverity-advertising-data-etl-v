@@ -3,7 +3,9 @@ import Dashboard from "./modules/dashboard";
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <div className="content">
+        <Dashboard />
+      </div>
     </div>
   );
 }
