@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "start:components": "cd packages/components && yarn start",
+    "start:config": "cd packages/config && yarn start",
     "start:utils": "cd packages/utils && yarn start",
     "start:web": "cd packages/web && yarn start",
     "build": "cd packages/web && yarn build",
     "test:web": "cd packages/web && yarn test",
     "test:components": "cd packages/components && yarn test",
     "test:utils": "cd packages/utils && yarn test",
-    "watch": "concurrently \"yarn start:utils --watch\" \"yarn start:components --watch\" \"yarn start:web\""
+    "watch": "concurrently \"yarn start:config --watch\" \"yarn start:utils --watch\" \"yarn start:components --watch\" \"yarn start:web\""
   },
   "workspaces": [
     "packages/*"
