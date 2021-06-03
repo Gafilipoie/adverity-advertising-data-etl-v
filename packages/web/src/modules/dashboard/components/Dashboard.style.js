@@ -7,7 +7,7 @@ const StyleDashboard = styled.div`
     return css`
       display: flex;
 
-      aside {
+      .control-panel {
         flex: 1;
         margin-right: ${spacing.tiny};
       }

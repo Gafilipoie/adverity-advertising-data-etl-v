@@ -3,7 +3,7 @@ import * as R from 'ramda';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
 
-const Select = ({ options, onChange }) => {
+const Select = ({ label, placeholder, options, onChange }) => {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,13 @@ const Select = ({ options, onChange }) => {
       closeMenuOnSelect={false}
       isMulti
       clearable
+      textFieldProps={{
+        label: 'Label',
+        InputLabelProps: {
+          shrink: true,
+        },
+      }}
+      placeholder={placeholder}
       noResultsText={null}
       options={values}
       onChange={onChange}
@@ -24,11 +31,15 @@ const Select = ({ options, onChange }) => {
 };
 
 Select.defaultProps = {
+  label: '',
+  placeholder: '',
   options: [],
   onChange: () => {},
 };
 
 Select.propTypes = {
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func,
 };
