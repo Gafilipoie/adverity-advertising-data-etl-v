@@ -11,6 +11,8 @@
     "@adverity/components": "^0.1.0",
     "@adverity/config": "^0.1.0",
     "@adverity/utils": "^0.1.0",
+    "axios": "^0.21.1",
+    "d3": "^6.7.0",
     "uuid": "^3.2.1"
   },
   "peerDependencies": {

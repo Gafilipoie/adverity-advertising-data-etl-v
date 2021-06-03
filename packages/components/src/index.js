@@ -1,1 +1,3 @@
-export const method = () => {};
+import Select from './select';
+
+export { Select };

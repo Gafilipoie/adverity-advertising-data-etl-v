@@ -11,6 +11,9 @@
     "@adverity/config": "^0.1.0",
     "@adverity/utils": "^0.1.0"
   },
+  "devDependencies": {
+    "react-select": "^4.3.1"
+  },
   "peerDependencies": {
     "prop-types": "^15.6.1",
     "ramda": "^0.25.0",

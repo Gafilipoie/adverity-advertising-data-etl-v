@@ -8,11 +8,8 @@ const StyleDashboard = styled.div`
       display: flex;
 
       aside {
-        display: flex;
-        justify-content: flex-start;
         flex: 1;
         margin-right: ${spacing.tiny};
-        background-color: red;
       }
 
       main {

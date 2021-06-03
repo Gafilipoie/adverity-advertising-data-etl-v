@@ -8,6 +8,7 @@
     "start:utils": "cd packages/utils && yarn start",
     "start:web": "cd packages/web && yarn start",
     "build": "cd packages/web && yarn build",
+    "clean": "rimraf **/node_modules **/lib **/build",
     "test:web": "cd packages/web && yarn test",
     "test:components": "cd packages/components && yarn test",
     "test:utils": "cd packages/utils && yarn test",
@@ -35,7 +36,8 @@
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-function-bind": "^7.12.13",
     "@babel/preset-react": "^7.13.13",
-    "babel-plugin-styled-components": "^1.12.0"
+    "babel-plugin-styled-components": "^1.12.0",
+    "rimraf": "^3.0.2"
   },
   "eslintConfig": {
     "extends": [
