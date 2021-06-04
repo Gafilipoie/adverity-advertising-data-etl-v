@@ -1,4 +1,5 @@
 import {
+  filterData,
   filterCampaigns,
   filterDataSources,
   transformDataSources,
@@ -15,6 +16,7 @@ const reducer = (state, action) => {
         allData: action.payload,
         dataSources: transformDataSources(action.payload),
         campaigns: transformCampaigns(action.payload),
+        filteredData: action.payload,
       };
     case actionTypes.SELECT_DATA_SOURCE: {
       const { allData, selectedDataSources } = action.payload;
@@ -30,6 +32,13 @@ const reducer = (state, action) => {
         ...state,
         dataSources: filterDataSources(selectedCampaigns, allData),
         selectedCampaigns
+      };
+    }
+    case actionTypes.FILTER_DATA: {
+      const { allData, selectedDataSources, selectedCampaigns } = action.payload;
+      return {
+        ...state,
+        filteredData: filterData(selectedDataSources, selectedCampaigns, allData),
       };
     }
     default:

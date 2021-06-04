@@ -11,11 +11,10 @@
     "@adverity/components": "^0.1.0",
     "@adverity/config": "^0.1.0",
     "@adverity/utils": "^0.1.0",
-    "axios": "^0.21.1",
-    "d3": "^6.7.0",
-    "uuid": "^3.2.1"
+    "axios": "^0.21.1"
   },
   "peerDependencies": {
+    "d3": "^6.7.0",
     "prop-types": "^15.6.1",
     "ramda": "^0.27.1",
     "react": "^17.0.2",

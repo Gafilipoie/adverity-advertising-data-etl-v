@@ -3,7 +3,8 @@ const initialState = {
   dataSources: [],
   campaigns: [],
   selectedDataSources: [],
-  selectedCampaigns: []
+  selectedCampaigns: [],
+  filteredData: [],
 };
 
 export default initialState;

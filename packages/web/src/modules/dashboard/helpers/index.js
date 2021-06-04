@@ -62,3 +62,25 @@ export const filterCampaigns = (selectedDataSources, data) => {
   }, selectedDataSources);
   return R.uniq(campaigns);
 };
+
+export const filterData = (selectedDataSources, selectedCampaigns, allData) => {
+  if (isBlank(selectedDataSources) && isBlank(selectedCampaigns)) return allData;
+  let filteredDataSourceData = [];
+  let filteredAllData = [];
+  if (!isBlank(selectedDataSources)) {
+    R.forEach((dataSource) => {
+      const filtered = R.filter((item) => item.Datasource === dataSource.value, allData);
+      filteredDataSourceData = R.concat(filteredDataSourceData, filtered);
+    }, selectedDataSources);
+  }
+  if (!isBlank(selectedCampaigns)) {
+    R.forEach((campaign) => {
+      const filtered = R.filter(
+        (item) => item.Campaign === campaign.value,
+        isBlank(filteredDataSourceData) ? allData : filteredDataSourceData
+      );
+      filteredAllData = R.concat(filteredAllData, filtered);
+    }, selectedCampaigns);
+  }
+  return isBlank(filteredAllData) ? filteredDataSourceData : filteredAllData;
+};

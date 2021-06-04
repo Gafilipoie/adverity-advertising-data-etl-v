@@ -1,15 +1,14 @@
-import React, { Component, useContext } from 'react';
-import { Select } from '@adverity/components';
-import { handleDataSourceChange, handleCampaignChange } from '../../actions';
-import { filterDataSources, filterCampaigns } from '../../helpers';
+import React, { useContext } from 'react';
+import { Button, Select } from '@adverity/components';
+import { handleDataSourceChange, handleCampaignChange, handleFilterData } from '../../actions';
 import { FilterContext } from '../Dashboard';
+import StyledFilter from './Filter.style';
 
 const Filter = () => {
   const { state, dispatch } = useContext(FilterContext);
-
   return (
-    <div className="control-panel">
-      <div>
+    <StyledFilter>
+      <div className="dataSources">
         <h3>DataSource</h3>
         <Select
           label="ceva"
@@ -18,7 +17,7 @@ const Filter = () => {
           onChange={(values) => handleDataSourceChange(values, state, dispatch)}
         />
       </div>
-      <div>
+      <div className="campaigns">
         <h3>Campaign</h3>
         <Select
           placeholder="All"
@@ -26,7 +25,10 @@ const Filter = () => {
           onChange={(values) => handleCampaignChange(values, state, dispatch)}
         />
       </div>
-    </div>
+      <div className="apply-wrapper">
+        <Button action={() => handleFilterData(state, dispatch)}>Apply</Button>
+      </div>
+    </StyledFilter>
   );
 };
 

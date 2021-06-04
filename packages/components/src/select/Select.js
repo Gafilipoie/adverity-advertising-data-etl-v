@@ -16,12 +16,6 @@ const Select = ({ label, placeholder, options, onChange }) => {
       closeMenuOnSelect={false}
       isMulti
       clearable
-      textFieldProps={{
-        label: 'Label',
-        InputLabelProps: {
-          shrink: true,
-        },
-      }}
       placeholder={placeholder}
       noResultsText={null}
       options={values}
