@@ -17,9 +17,16 @@ const Chart = ({ data }) => {
         <path className="valueLine-1" />
         <path className="valueLine-2" />
         <g className="x-axis" />
+        <g className="x-axis-label">
+          <line className="x-axis-label-clicks-line" />
+          <text className="x-axis-label-clicks" />
+          <line className="x-axis-label-impressions-line" />
+          <text className="x-axis-label-impressions" />
+        </g>
+        <text className="y-left-axis-label" />
         <g className="y-left-axis" />
+        <text className="y-right-axis-label" />
         <g className="y-right-axis" />
-        <g className="maximum-line-path" />
       </g>
     </svg>
   );

@@ -6,7 +6,11 @@ const StyledFilter = styled.div`
 
     return css`
       flex: 1;
+      padding: ${spacing.small};
       margin-right: ${spacing.tiny};
+      border: 1px solid #00000021;
+      background-color: #cdeef7;
+      box-shadow: 0px 0px 4px #00000021;
 
       .campaigns {
         margin-bottom: ${spacing.base};
