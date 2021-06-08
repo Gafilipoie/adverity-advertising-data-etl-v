@@ -6,7 +6,6 @@ const StyledMetric = styled.main`
       display: flex;
       justify-content: flex-start;
       flex: 3;
-      background-color: grey;
     `;
   }}
 `;
