@@ -5,7 +5,7 @@ import StyledMetric from './Metric.style';
 
 const Metric = () => {
   const { state } = useContext(FilterContext);
-
+console.log(state.filteredData)
   return (
     <StyledMetric>
       <Chart data={state.filteredData} />

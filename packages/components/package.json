@@ -9,13 +9,16 @@
   },
   "dependencies": {
     "@adverity/config": "^0.1.0",
-    "@adverity/utils": "^0.1.0"
+    "@adverity/utils": "^0.1.0",
+    "enzyme-adapter-react-16": "^1.15.6"
   },
   "devDependencies": {
     "react-select": "^4.3.1"
   },
   "peerDependencies": {
+    "chai": "^4.3.4",
     "d3": "^6.7.0",
+    "enzyme": "^3.11.0",
     "prop-types": "^15.6.1",
     "ramda": "^0.25.0",
     "react": "^17.0.2",

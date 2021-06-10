@@ -11,7 +11,6 @@ const Filter = () => {
       <div className="dataSources">
         <h3>DataSource</h3>
         <Select
-          label="ceva"
           placeholder="All"
           options={state.dataSources}
           onChange={(values) => handleDataSourceChange(values, state, dispatch)}

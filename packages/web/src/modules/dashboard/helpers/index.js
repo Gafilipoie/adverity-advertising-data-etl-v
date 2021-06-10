@@ -19,7 +19,7 @@ export const transformCampaigns = (data) =>
     }, [])
   )(data);
 
-const transformDataSourcesByCampaign = (campaign, data) =>
+export const transformDataSourcesByCampaign = (campaign, data) =>
   R.reduce(
     (acc, item) => {
       if (item.Campaign === campaign.value) {
@@ -31,7 +31,7 @@ const transformDataSourcesByCampaign = (campaign, data) =>
     data
   );
 
-const transformCampaignsByDataSource = (dataSource, data) =>
+export const transformCampaignsByDataSource = (dataSource, data) =>
   R.reduce(
     (acc, item) => {
       if (item.Datasource === dataSource.value) {

@@ -17,7 +17,6 @@ const Select = ({ label, placeholder, options, onChange }) => {
       isMulti
       clearable
       placeholder={placeholder}
-      noResultsText={null}
       options={values}
       onChange={onChange}
     />
