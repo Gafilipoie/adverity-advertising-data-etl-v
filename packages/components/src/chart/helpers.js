@@ -25,7 +25,7 @@ export const getConfig = data => {
   const y0 = d3.scaleLinear().range([height, 0]);
   const y1 = d3.scaleLinear().range([height, 0]);
 
-  const xAxis = d3.axisBottom(x).ticks(10);
+  const xAxis = d3.axisBottom(x).ticks(5);
   const yAxisLeft = d3.axisLeft(y0).ticks(5);
   const yAxisRight = d3.axisRight(y1).ticks(5);
 
